@@ -1,0 +1,26 @@
+<ion-modal-view>
+
+  <ion-header-bar>
+    <i class="title ion-android-contacts"></i>
+  </ion-header-bar>
+
+  <ion-content>
+    <form name="loginForm" ng-submit="doLogin(loginForm.$valid)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label text-algin:right">用户</span>:&nbsp;
+          <input type="text" ng-model="loginData.username" placeholder="username" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">密码</span>:&nbsp;
+          <input type="password" ng-model="loginData.password" placeholder="password" required>
+        </label>
+
+        <div class="row">
+          <div class="col-25 col-offset-25 button button-small button-positive" ng-click="doLogin()">登录</div>
+          <div class="col-25 button button-small button-assertive button-stable" ng-click="doReset()">重置</div>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
