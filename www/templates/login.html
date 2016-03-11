@@ -10,18 +10,18 @@
         <label class="item item-input">
           <span class="input-label text-algin:right">用户</span>:&nbsp;
           <input type="text" name="username" ng-model="loginData.username" placeholder="username" required>
-          <i class="icon ion-close-circled assertive" ng-show="loginForm.username.$dirty && loginForm.username.$invalid"></i>
+          <i class="icon ion-alert-circled assertive" ng-show="loginForm.username.$dirty && loginForm.username.$invalid"></i>
           <i class="icon ion-checkmark-circled balanced" ng-show="loginForm.username.$dirty && loginForm.username.$valid"></i>
         </label>
         <label class="item item-input">
           <span class="input-label">密码</span>:&nbsp;
           <input type="password" name="password" ng-model="loginData.password" placeholder="password" required>
-          <i class="icon ion-close-circled assertive" ng-show="loginForm.password.$dirty && loginForm.password.$invalid"></i>
+          <i class="icon ion-alert-circled assertive" ng-show="loginForm.password.$dirty && loginForm.password.$invalid"></i>
           <i class="icon ion-checkmark-circled balanced" ng-show="loginForm.password.$dirty && loginForm.password.$valid"></i>
         </label>
 
-        <div 
-        
+        <div ng-show="msg" class="text-center assertive">{{msg}}</div>
+
         <div class="row">
           <div class="col-25 col-offset-25 button button-small button-positive" ng-disabled="loginForm.$invalid" ng-click="doLogin()">登录</div>
           <div class="col-25 button button-small button-assertive button-stable" ng-click="doReset()">重置</div>
